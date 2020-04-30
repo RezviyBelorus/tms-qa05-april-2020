@@ -62,6 +62,7 @@ public class Student {
 
     @Override
     public boolean equals(Object cheburashka) {
+        System.out.println("equals");
         if (this == cheburashka) {
             return true;
         }
@@ -85,6 +86,7 @@ public class Student {
 
     @Override
     public int hashCode() {
+        System.out.println("hashcode");
         return Objects.hash(
             name,
             age,
