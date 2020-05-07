@@ -1,0 +1,8 @@
+1. JVM memory
+2. String
+3. StringBuilder
+4. StringBuffer
+5. Как измерять время
+
+Info:
+Глава 7: https://metanit.com/java/tutorial/7.1.php

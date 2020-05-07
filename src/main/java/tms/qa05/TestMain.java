@@ -1,15 +1,22 @@
 package tms.qa05;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 public class TestMain {
+    private static Integer[] array = {1, 2, 3};
+
     public static void main(String[] args) {
-        List<Integer> integers = new ArrayList<>(Arrays.asList(1, 2, 3));
+        Integer[] integers = get();
 
-        integers.retainAll(Arrays.asList(1,0));
 
-        System.out.println(integers);
+        integers[0] = 666;
+
+        System.out.println(Arrays.asList(array));
+
+        System.out.println(7 % array.length);
+    }
+
+    private static Integer[] get() {
+        return array;
     }
 }
