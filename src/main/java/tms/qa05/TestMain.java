@@ -1,44 +1,48 @@
 package tms.qa05;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.LinkedList;
 import java.util.List;
-import java.util.Set;
 
 public class TestMain {
     private static Integer[] array = {1, 2, 3};
 
     public static void main(String[] args) {
-        List<Integer> integers = new ArrayList<>();
-//        integers.add(0);
-        integers.add(2);
-//        integers.add(3);
-//        integers.add(4);
-        integers.add(3);
+        String text = "aaaaa";
 
+        int countWord;
 
-        integers.contains(2);
-        List<Double> doubles = Arrays.asList(1.0, 2.0);
+        String alert = "a";
+        String add = "add";
+        String good = "good";
+        String plan = "plan";
 
-        LinkedList<String> ll = new LinkedList<>();
-        ll.add("A");
-        ll.add("B");
-        ll.add("C");
+        /*
+        String[] words = {alertSearch, ...};
+        for (int i = 0; i < words.length; i++ {
+             countWord = findWord(alertSearch, text);
+             System.out.println("Слово 'alert' содердится с тексте " + countWord + " раз");
+        }
+        */
 
-        ll.peekFirst();
-        ll.peekLast();
+        countWord = findWord(alert, text);
+        System.out.println("alert = " + countWord);
+        countWord = findWord(add, text);
+        System.out.println("add = " + countWord);
+        countWord = findWord(good, text);
+        System.out.println("good = " + countWord);
+        countWord = findWord(plan, text);
+        System.out.println("plan = " + countWord);
+    }
 
-        System.out.println(ll.poll());
-        System.out.println(ll.peek());
-
-        System.out.println(ll);
-
-
-        Set<Integer> set = new HashSet<>();
-        set.add(2);
-        set.add(2);
+    public static int findWord(String searchWord, String text){
+        int countWord = 0;
+        for (int i = 0; i > -1; i++) {
+            i = text.indexOf(searchWord, i);
+            if (i == -1) {
+                break;
+            }
+            countWord++;
+        }
+        return countWord;
     }
 
     private static void addAll(List<Number> from, List<? extends Number> to) {
